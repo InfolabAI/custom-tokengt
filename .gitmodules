@@ -1,3 +1,0 @@
-[submodule "large-scale-regression/fairseq"]
-	path = large-scale-regression/fairseq
-	url = https://github.com/pytorch/fairseq.git
