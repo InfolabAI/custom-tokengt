@@ -1,0 +1,20 @@
+  File "/compuworks/anaconda3/envs/py39/lib/python3.9/threading.py", line 937, in _bootstrap    self._bootstrap_inner()
+  File "/compuworks/anaconda3/envs/py39/lib/python3.9/threading.py", line 980, in _bootstrap_inner    self.run()
+  File "/compuworks/anaconda3/envs/py39/lib/python3.9/site-packages/fairseq/data/iterators.py", line 677, in run    for item in self._source:
+  File "/compuworks/anaconda3/envs/py39/lib/python3.9/site-packages/torch/utils/data/dataloader.py", line 359, in __iter__    return self._get_iterator()
+  File "/compuworks/anaconda3/envs/py39/lib/python3.9/site-packages/torch/utils/data/dataloader.py", line 305, in _get_iterator    return _MultiProcessingDataLoaderIter(self)
+  File "/compuworks/anaconda3/envs/py39/lib/python3.9/site-packages/torch/utils/data/dataloader.py", line 918, in __init__    w.start()
+  File "/compuworks/anaconda3/envs/py39/lib/python3.9/multiprocessing/process.py", line 121, in start    self._popen = self._Popen(self)
+  File "/compuworks/anaconda3/envs/py39/lib/python3.9/multiprocessing/context.py", line 224, in _Popen    return _default_context.get_context().Process._Popen(process_obj)
+  File "/compuworks/anaconda3/envs/py39/lib/python3.9/multiprocessing/context.py", line 277, in _Popen    return Popen(process_obj)
+  File "/compuworks/anaconda3/envs/py39/lib/python3.9/multiprocessing/popen_fork.py", line 19, in __init__    self._launch(process_obj)
+  File "/compuworks/anaconda3/envs/py39/lib/python3.9/multiprocessing/popen_fork.py", line 71, in _launch    code = process_obj._bootstrap(parent_sentinel=child_r)
+  File "/compuworks/anaconda3/envs/py39/lib/python3.9/multiprocessing/process.py", line 315, in _bootstrap    self.run()
+  File "/compuworks/anaconda3/envs/py39/lib/python3.9/multiprocessing/process.py", line 108, in run    self._target(*self._args, **self._kwargs)
+  File "/compuworks/anaconda3/envs/py39/lib/python3.9/site-packages/torch/utils/data/_utils/worker.py", line 287, in _worker_loop    data = fetcher.fetch(index)
+  File "/compuworks/anaconda3/envs/py39/lib/python3.9/site-packages/torch/utils/data/_utils/fetch.py", line 44, in fetch    data = [self.dataset[idx] for idx in possibly_batched_index]
+  File "/compuworks/anaconda3/envs/py39/lib/python3.9/site-packages/torch/utils/data/_utils/fetch.py", line 44, in <listcomp>    data = [self.dataset[idx] for idx in possibly_batched_index]
+  File "/compuworks/anaconda3/envs/py39/lib/python3.9/site-packages/fairseq/data/base_wrapper_dataset.py", line 17, in __getitem__    return self.dataset[index]
+  File "/compuworks/anaconda3/envs/py39/lib/python3.9/site-packages/fairseq/data/nested_dictionary_dataset.py", line 70, in __getitem__    return OrderedDict((k, ds[index]) for k, ds in self.defn.items())
+  File "/compuworks/anaconda3/envs/py39/lib/python3.9/site-packages/fairseq/data/nested_dictionary_dataset.py", line 70, in <genexpr>    return OrderedDict((k, ds[index]) for k, ds in self.defn.items())
+  File "/mnt/share_nfs/my_method/custom_tokengt/large-scale-regression/tokengt/data/dataset.py", line 33, in __getitem__    return preprocess_item(item)
